@@ -42,14 +42,14 @@ else:
 if toss:
     while True:
         choice = input("\nChoose batting or bowling (bat or bowl): ").lower()
-        if choice in ('bat', 'bowl'):
-            usr_bat = (choice == "bat")
+        if choice in ('bat', 'bowl', 'batting', 'bowling'):
+            usr_bat = (choice == "bat" or choice == "batting")
             break
         else:
             print("ERROR | Invalid choice. Please choose bat or bowl!")
 else:
     usr_bat = random.choice([True, False])
-    print(f"Computer chose to {'bat' if usr_bat else 'bowl'} first!")
+    print(f"Computer chose to {'bowl' if usr_bat else 'bat'} first!")
 
 # Gameplay
 usr_score = 0
